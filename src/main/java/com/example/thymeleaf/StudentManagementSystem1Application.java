@@ -20,7 +20,12 @@ public class StudentManagementSystem1Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		/* For First time running only
+		
+		/*
+		 * spring.jpa.hibernate.ddl-auto=create
+		 * The tables will be dropped every time on starting the application
+		 * The following data would be entered on every application start-up
+		 */
 		Student student1 = new Student("Kushal", "Sharma", "skushal746@gmail.com");
 		studentRepository.save(student1);
 		
@@ -30,7 +35,7 @@ public class StudentManagementSystem1Application implements CommandLineRunner {
 
 		Student student3 = new Student("Tony", "Stark", "tony.stark@gmail.com");
 		studentRepository.save(student3);
-		*/
+		
 	}
 
 }
